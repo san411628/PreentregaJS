@@ -1,0 +1,174 @@
+.body__fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.ibb.co/7pGrK67/wallpapercomida.png);
+    width: 95%;
+    height: 100%;
+    background-position: center;
+}
+
+.main__espacio{
+    background-image: url(https://i.ibb.co/JnGpHWB/maderaoscura.jpg);
+    background-position: center;
+    width: 800px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+}
+
+.espacio__container{
+    border: red 5px solid;
+    width: 90%;
+    height: 90%;
+}
+
+.box1__container--logo{
+    background-color: white;
+    width: 100%;
+    height: 15%;
+   
+}
+
+.container__logo{
+    border: solid brown 5px;
+    background-color: rgb(214, 234, 211);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.logo{
+    position: absolute;
+    width: 100%;
+}
+
+.container__picure{
+    border: solid orange 5px;
+    width: 100%;
+    height: 10%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 150px);
+   grid-template-rows: 50px ;
+    row-gap: 25px;
+}
+
+.picture{
+    width: 130px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 10%;
+}
+
+.calculator__container{
+    border: solid 5px blue;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.calculator__options{
+    border: pink solid 5px;
+    height: 100%;
+    width: 30%;
+
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    grid-template-rows: repeat(4, 150px);
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.calculator__food--option{
+    border: solid rebeccapurple 5px;
+    height: 100%;
+    width: 70%;
+}
+
+
+.grid__element{ 
+    border: solid whitesmoke 5px;
+    width: 100%;
+    height: 90%;
+    border-radius: 7px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+} 
+
+.container__vector{
+    width: 55%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+} 
+
+.vector{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.text__box--container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   position: relative;
+}
+
+.box__text{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__vector2{
+    width: 50%;
+    height: 50%;
+    position: relative;
+ 
+}
+
+.vector2{
+    width: 70%;
+    height: 85%;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+ 
+}
+
+.box__text2{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 5px;
+}
