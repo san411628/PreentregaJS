@@ -108,10 +108,7 @@
     justify-content: space-between;
 }
 
-.food__gridcontainer :hover{
-    border: solid 1px black;
-    background-color: rgb(226, 220, 220);
-}
+
 .food__gridcontainer{
     border: solid 5px green;
     width: 100%;
@@ -120,6 +117,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:  100px;
     column-gap: 10px;
+}
+
+.food__gridcontainer :hover{
+    border: solid 1px black;
+    background-color: rgb(226, 220, 220);
 }
 
 .food__gridelement{
@@ -160,6 +162,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.option__elementos--calcladora :hover{
+    background-color: rgb(226, 220, 220);
 }
 
 .container__img--igual{
