@@ -1,3 +1,10 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
 .body__fondo{
     display: flex;
     justify-content: center;
@@ -82,7 +89,7 @@
 .calculator__options{
     border: pink solid 5px;
     height: 100%;
-    width: 30%;
+    width: 20%;
 
     display: grid;
     grid-template-columns: repeat(1, 200px);
@@ -95,9 +102,77 @@
 .calculator__food--option{
     border: solid rebeccapurple 5px;
     height: 100%;
-    width: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.food__gridcontainer :hover{
+    border: solid 1px black;
+    background-color: rgb(226, 220, 220);
+}
+.food__gridcontainer{
+    border: solid 5px green;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  100px;
+    column-gap: 10px;
+}
+
+.food__gridelement{
+
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5%;
+    
+
+} 
+
+
+
+
+
+.option__elementos--calcladora{
+    border: solid palegreen 5px;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 120px);
+    grid-template-rows:  100px;
+    column-gap: 10px;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+
+
+
+.option__gridelement--igual{
+    border: solid black 5px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container__img--igual{
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.igual{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 .grid__element{ 
     border: solid whitesmoke 5px;
@@ -152,17 +227,16 @@
 
 .container__vector2{
     width: 50%;
-    height: 50%;
+    height: 60%;
     position: relative;
  
 }
 
 .vector2{
-    width: 70%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 8px;
-    top: 10px;
+   
  
 }
 

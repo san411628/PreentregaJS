@@ -42,7 +42,7 @@ function Comidas(nombre, cantidad, calorias,proteinas, carbohidratos, grasas  ) 
   const helado = new Comidas("Helado", "1 Taza", 1119, 4.6, "32.4g", 14.2);
   const bebida = new Comidas("CocaCola", "1L", 420, 0, "21g", 2.4);
 
- 
+   
 
   const DietaNueva= [];
 function ElegiComida() {
