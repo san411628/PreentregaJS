@@ -33,8 +33,20 @@ function Comidas(nombre, cantidad, calorias,proteinas, carbohidratos, grasas  ) 
     const pollo500 = new Comidas("Pollo Simple", 500 + "g", pollo.calorias * 5  , pollo.proteinas * 5 , 0 , pollo.grasas * 4 );
 
 
+    const carne = new Comidas("Carne De Res", 100 + "g", 288, 26.3, 0, 19.5);
+    const carne50 = new Comidas("Carne De Res", 50 + "g", carne.calorias / 2, carne.proteinas / 2, 0, carne.grasas / 2);
+    const carne200 = new Comidas("Carne De Res", 200 + "g", carne.calorias * 2, carne.proteinas * 2, 0, carne.grasas * 2);
+    const carne300 = new Comidas("Carne De Res", 300 + "g", carne.calorias * 3, carne.proteinas * 3, 0, carne.grasas * 3);
+    const carne400 = new Comidas("Carne De Res", 400 + "g", carne.calorias * 4, carne.proteinas * 4, 0, carne.grasas * 4);
+    const carne500 = new Comidas("Carne De Res", 500 + "g", carne.calorias * 5, carne.proteinas * 5, 0, carne.grasas * 5);
+    
+
+
+
+
 const BrocolisArr= [ brocoli50, brocoli, brocoli200, brocoli300, brocoli400, brocoli500  ];
 const PolloArr= [pollo50, pollo, pollo200, pollo300, pollo400, pollo500];
+const CarneArr= [ carne50, carne , carne200, carne300, carne400, carne500];
 
 
 
@@ -123,6 +135,12 @@ BottonComidas[3].addEventListener('click', ()=>{
 
 })
 
+BottonComidas[1].addEventListener('click', ()=>{
+    SeleccionCantidad(CarneArr)
+    console.log(DietaNueva);
+
+})
+
 BottonComidas[0].addEventListener('click', ()=>{
     SeleccionCantidad(PolloArr)
     console.log(DietaNueva);
@@ -175,8 +193,62 @@ IgualA[0].addEventListener('click', ()=>{
 })
 
 
+ const BottonIMC = document.getElementsByClassName('special__gridelement');
 
 
+    function CalculadoraIMC() {
+        let peso
+        let altura
+        let imc
+        while (imc != peso / (altura * altura)) {
+            peso=parseInt(prompt("Introduce Tu Peso En KG"))
+            altura= parseFloat(prompt("Introduce Tu Altura Separada Por Un Punto"))
+            imc= peso / (altura * altura);
+
+            if (imc == peso / (altura * altura)) {
+                console.log("Tu Indice De Masa Corporal Es De" + " " +imc);
+                alert("Tu Indice De Masa Corporal Es De" + " " +imc)
+                if (imc <= 18.5 ) {
+                    console.log("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+ "Usted Se encuentra en el rango de peso INSUFISIENTE");
+                    alert("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+ "Usted Se encuentra en el rango de peso INSUFISIENTE");
+                } else if (imc >= 18.5 && imc <= 24.9) {
+                    console.log("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+ "Usted Se encuentra en el rango de peso SALUDABLE");
+                    alert("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+ "Usted Se encuentra en el rango de peso SALUDABLE");
+                } else if (imc >= 25.0 && imc <= 29.9) {
+                    console.log("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+"Usted Se encuentra en el rango de SOBREPESO");
+                    alert("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+"Usted Se encuentra en el rango de SOBREPESO");
+                } else if (imc >= 30.0) {
+                    console.log("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+"Usted Se encuentra en el rango de OBESIDAD");
+                    alert("Ya que Tu Indice de Masa Corporal es de" + " " + imc + " "+"Usted Se encuentra en el rango de OBESIDAD");
+                }
+        
+        
+        
+            } else {
+                alert("Solo Se permiten Datos Numericos")
+            }
+        }
+    }
+  
+
+    function Restar(arr,el) {
+        
+        arr.pop(el)
+        console.log("Se Elimino La Ultima Comida De Tu Dieta");
+        console.log(arr);
+      
+    }
 
 
+   
+
+ BottonIMC[0].addEventListener('click', ()=>{
+    CalculadoraIMC()
+ })
+
+const Menos= document.getElementsByClassName('option__gridelement--menos');
+
+Menos[0].addEventListener('click', ()=>{
+    Restar(DietaNueva);
+})
  

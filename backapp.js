@@ -6,7 +6,7 @@ let altura
 let imc
 let alturaPotencia
 
-function calculadora() {  
+function CalculadoraIMC() {  
 while (imc != peso / alturaPotencia ) {
      peso= parseInt (prompt("Ingrese Su Peso En KG"));
      altura= parseFloat (prompt("Ingrese Su Altura En Metros Separada Con Un Punto"));
