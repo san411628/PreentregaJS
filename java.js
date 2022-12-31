@@ -152,9 +152,13 @@ function CierroFicha() {
     console.log("Este Es El Fin De Tu Ficha Nutricional.");
 }
 
+
+
+
+
 function SumarCalorias() {
     const CaloriasDia= DietaNueva.reduce((acc, el)=>{
-        return acc + el.calorias;
+        return acc + el.calorias ;
      },0)
 
      console.log( "Hoy Consumiste Un Total De"+ " " + CaloriasDia + "Kcal" + " " + "En Calorias");
@@ -181,6 +185,14 @@ function SumarGrasas() {
 }
  
 
+function SumarCarbo() {
+    const CarboDia= DietaNueva.reduce((acc, el)=>{
+        return acc + el.carbohidratos;
+     },0)
+    
+    console.log( "Hoy Consumiste Un Total De"+ " " + CarboDia + " " + "Carbohidratos Totales");
+    
+}
 
 const IgualA = document.getElementsByClassName('option__gridelement--igual');
 
@@ -188,6 +200,7 @@ IgualA[0].addEventListener('click', ()=>{
     CierroFicha(),
     SumarCalorias(),
     SumarProteinas(),
+    SumarCarbo(),
     SumarGrasas();
 
 })
@@ -246,9 +259,112 @@ IgualA[0].addEventListener('click', ()=>{
     CalculadoraIMC()
  })
 
+ const Resultado= document.getElementById('resultado');
+
 const Menos= document.getElementsByClassName('option__gridelement--menos');
+
+function MostrarStri(el) {
+    Resultado.innerText = Resultado.innerText + el
+
+}
+
+
 
 Menos[0].addEventListener('click', ()=>{
     Restar(DietaNueva);
-})
  
+})
+
+
+
+
+
+const ArrNumeros=[0, 1,2,3,4,5,6,7,8,9];
+
+function MostrarNum( val) {
+  Resultado.innerText= Resultado.innerText + ArrNumeros[val]
+}
+
+
+
+const numeroX= document.getElementsByClassName('numeros__gridelement');
+
+numeroX[0].addEventListener('click', ()=>{
+    MostrarNum(1)
+})
+
+numeroX[1].addEventListener('click', ()=>{
+    MostrarNum(2)
+})
+
+numeroX[2].addEventListener('click', ()=>{
+    MostrarNum(3)
+})
+
+numeroX[3].addEventListener('click', ()=>{
+    MostrarNum(0)
+})
+
+const agrego= document.getElementsByClassName('nombres__gridelement')
+
+
+agrego[0].addEventListener('click', ()=>{
+    MostrarStri("KCAL");
+})
+
+agrego[1].addEventListener('click', ()=>{
+    MostrarStri("PROT")
+})
+
+agrego[2].addEventListener('click', ()=>{
+    MostrarStri("CARB")
+})
+
+function SumaDeCosas() {
+   if (Resultado.innerText.includes("KCAL")) {
+    const valorKCAl= new Comidas(0, 0,   parseInt( Resultado.innerText), 0, 0, 0); 
+    DietaNueva.push(valorKCAl);
+    console.log(DietaNueva);
+   } else {
+    if (Resultado.innerText.includes("PROT")) {
+        const valorKCAl= new Comidas(0, 0,   0, parseInt( Resultado.innerText), 0, 0); 
+        DietaNueva.push(valorKCAl);
+        console.log(DietaNueva);
+    } else{
+        if (Resultado.innerText.includes("CARB")) {
+            const valorKCAl= new Comidas(0, 0,   0, 0 , parseInt( Resultado.innerText), 0); 
+            DietaNueva.push(valorKCAl);
+            console.log(DietaNueva);
+        } else{
+            alert("El Valor No Tiene Categoria")
+        }
+    }
+   } 
+}
+
+function Clear() {
+    Resultado.innerText= Resultado.innerText.slice(1000, -1)
+}
+
+
+const Mas= document.getElementsByClassName('option__gridelement--mas')
+
+
+Mas[0].addEventListener('click', ()=>{
+    SumaDeCosas(),
+    Clear();
+})
+
+
+
+const EliminarUno= document.getElementsByClassName('borrar__gridelement');
+
+function Borrar() {
+    Resultado.innerText= Resultado.innerText.slice(0, -1);
+    
+}
+
+EliminarUno[0].addEventListener('click', ()=>{
+    Borrar()
+})
+
