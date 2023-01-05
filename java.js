@@ -1,4 +1,84 @@
 
+const NumerosContainer= document.getElementsByClassName('calculator__food--option');
+
+let htmlnumeros= `<div class="numeros__gridcontainer">
+<div class="numeros__gridelement">
+    <span>9</span>
+</div>
+<div class="numeros__gridelement">
+    <span>8</span>
+</div>
+<div class="numeros__gridelement">
+    <span>7</span>
+</div>
+<div class="numeros__gridelement">
+    <span>6</span>
+</div>
+<div class="numeros__gridelement">
+    <span>5</span>
+</div>
+<div class="numeros__gridelement">
+    <span>4</span>
+</div>
+<div class="numeros__gridelement">
+    <span>3</span>
+</div>
+<div class="numeros__gridelement">
+    <span>2</span>
+</div>
+<div class="numeros__gridelement">
+    <span>1</span>
+</div>
+<div class="numeros__gridelement">
+    <span>0</span>
+</div>
+<div class="numeros__gridelement">
+    <span>.</span>
+</div>
+<div class="borrar__gridelement">
+    <div class="borrar__flecha">
+    <img class="flecha" src="multimedia/flechabolveatra-removebg-preview.png" >
+    </div>
+</div>
+</div>`
+
+
+
+let htmlcomidas=`<div class="food__gridcontainer">
+                    <div class="food__gridelement">
+                        <div class="container__vector2">
+                            <img class="vector2" src="multimedia/chikenrecolorremovebg-preview.png" alt="">
+                        </div>
+                    </div>
+                    <div class="food__gridelement">
+                        <span>Carne</span>
+                    </div>
+                    <div class="food__gridelement">
+                        <span>Helado</span>
+                    </div>
+                    <div class="food__gridelement">
+                    <p> Brocoli</p>
+                    </div>
+
+                    </div>`
+
+
+function HTML(el) {
+    NumerosContainer[0].innerHTML= "";
+    
+    NumerosContainer[0].innerHTML=el;
+}
+
+const BottonLlamar= document.getElementsByClassName('picture')
+
+BottonLlamar[0].addEventListener('click', ()=>{
+    HTML(htmlnumeros);
+})
+
+
+BottonLlamar[1].addEventListener('click', ()=>{
+   HTML(htmlcomidas);
+})
 
 
 
@@ -289,21 +369,46 @@ function MostrarNum( val) {
 
 const numeroX= document.getElementsByClassName('numeros__gridelement');
 
-numeroX[0].addEventListener('click', ()=>{
+numeroX[9].addEventListener('click', ()=>{
+    MostrarNum(0)
+})
+
+numeroX[8].addEventListener('click', ()=>{
     MostrarNum(1)
 })
 
-numeroX[1].addEventListener('click', ()=>{
+numeroX[7].addEventListener('click', ()=>{
     MostrarNum(2)
 })
 
-numeroX[2].addEventListener('click', ()=>{
+numeroX[6].addEventListener('click', ()=>{
     MostrarNum(3)
+})
+numeroX[5].addEventListener('click', ()=>{
+    MostrarNum(4)
+})
+
+numeroX[4].addEventListener('click', ()=>{
+    MostrarNum(5)
 })
 
 numeroX[3].addEventListener('click', ()=>{
-    MostrarNum(0)
+    MostrarNum(6)
 })
+
+numeroX[2].addEventListener('click', ()=>{
+    MostrarNum(7)
+})
+
+numeroX[1].addEventListener('click', ()=>{
+    MostrarNum(8)
+})
+
+numeroX[0].addEventListener('click', ()=>{
+    MostrarNum(9)
+})
+
+console.log(numeroX);
 
 const agrego= document.getElementsByClassName('nombres__gridelement')
 
@@ -360,11 +465,24 @@ Mas[0].addEventListener('click', ()=>{
 const EliminarUno= document.getElementsByClassName('borrar__gridelement');
 
 function Borrar() {
-    Resultado.innerText= Resultado.innerText.slice(0, -1);
-    
+    if (Resultado.innerText.includes("KCAL")) {
+        Resultado.innerText= Resultado.innerText.slice(1000, -1);
+       } else {
+        if (Resultado.innerText.includes("PROT")) {
+            Resultado.innerText= Resultado.innerText.slice(1000, -1);
+        } else{
+            if (Resultado.innerText.includes("CARB")) {
+                Resultado.innerText= Resultado.innerText.slice(1000, -1);
+            } else{
+                Resultado.innerText= Resultado.innerText.slice(0, -1);
+            }
+        }
+    }
 }
 
 EliminarUno[0].addEventListener('click', ()=>{
     Borrar()
 })
+
+
 

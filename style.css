@@ -69,12 +69,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    font-family: Calculator;
-    @font-face {
-        font-family: Calculator;
-        src: url(https://www.fontspace.com/category/calculator);
-    }
-    
+  font-family: 'Calculator';
+}
+
+
+@font-face {
+    font-family: 'Calculator';
+    src: url(multimedia/digital-7-font/Digital7Mono-Yz9J4.ttf);
+    font-style: normal;
 }
 
 
@@ -89,6 +91,7 @@
     grid-template-columns: repeat(4, 150px);
    grid-template-rows: 50px ;
     row-gap: 25px;
+                         
 }
 
 .picture{
@@ -221,13 +224,14 @@
 }
 
 .numeros__gridcontainer{
-    border: solid 5px green;
+    border: solid 5px orange;
     width: 100%;
-    height: 20%;
+    height: 70%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows:  100px;
     column-gap: 10px;
+    row-gap: 10px;
 }
 
 .numeros__gridelement{
