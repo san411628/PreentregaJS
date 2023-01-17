@@ -393,3 +393,81 @@
     position: absolute;
     top: 5px;
 }
+
+
+
+
+
+
+
+
+/* ficha.html /*/
+
+
+.ficha__body{
+    width: 1550px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.body__container{
+    border: solid 1px black;
+    border-radius: 2%;
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.box__titel{
+    width: 100%;
+    height: 10%;
+    border: solid 5px pink;
+}
+
+.titel{
+
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.box__tabla{
+    
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows:  30px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.tabla{
+    margin-left: 10px;
+}
+
+
+#Mio{
+    width: 100%;
+    height: 50%;
+    border: solid 5px black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#lista{
+    list-style: none;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows:  40px;
+}
+
+.li__column{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

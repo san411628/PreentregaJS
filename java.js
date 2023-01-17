@@ -2,45 +2,45 @@
 const NumerosContainer= document.getElementsByClassName('calculator__food--option');
 
 let htmlnumeros= `<div class="numeros__gridcontainer">
-<div class="numeros__gridelement">
-    <span>9</span>
-</div>
-<div class="numeros__gridelement">
-    <span>8</span>
-</div>
-<div class="numeros__gridelement">
-    <span>7</span>
-</div>
-<div class="numeros__gridelement">
-    <span>6</span>
-</div>
-<div class="numeros__gridelement">
-    <span>5</span>
-</div>
-<div class="numeros__gridelement">
-    <span>4</span>
-</div>
-<div class="numeros__gridelement">
-    <span>3</span>
-</div>
-<div class="numeros__gridelement">
-    <span>2</span>
-</div>
-<div class="numeros__gridelement">
-    <span>1</span>
-</div>
-<div class="numeros__gridelement">
-    <span>0</span>
-</div>
-<div class="numeros__gridelement">
-    <span>.</span>
-</div>
-<div class="borrar__gridelement">
-    <div class="borrar__flecha">
-    <img class="flecha" src="multimedia/flechabolveatra-removebg-preview.png" >
-    </div>
-</div>
-</div>`
+                    <div class="numeros__gridelement">
+                        <span>9</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>8</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>7</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>6</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>5</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>4</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>3</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>2</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>1</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>0</span>
+                    </div>
+                    <div class="numeros__gridelement">
+                        <span>.</span>
+                    </div>
+                    <div class="borrar__gridelement">
+                        <div class="borrar__flecha">
+                        <img class="flecha" src="multimedia/flechabolveatra-removebg-preview.png" >
+                        </div>
+                    </div>
+                    </div>`
 
 
 
@@ -59,25 +59,34 @@ let htmlcomidas=`<div class="food__gridcontainer">
                     <div class="food__gridelement">
                     <p> Brocoli</p>
                     </div>
-
+                    
                     </div>`
 
 
-function HTML(el) {
-    NumerosContainer[0].innerHTML= "";
+function HTML(un, el) {
+    un[0].innerHTML= "";
     
-    NumerosContainer[0].innerHTML=el;
+    un[0].innerHTML= el;
+   
 }
+
+//function HTML(el) {
+	//NumerosContainer[0].innerHTML = "";
+	//console.log(el);
+	//NumerosContainer[0].innerHTML = el;
+//}
+
+
 
 const BottonLlamar= document.getElementsByClassName('picture')
 
 BottonLlamar[0].addEventListener('click', ()=>{
-    HTML(htmlnumeros);
+    HTML(NumerosContainer,htmlnumeros);
 })
 
 
 BottonLlamar[1].addEventListener('click', ()=>{
-   HTML(htmlcomidas);
+   HTML(NumerosContainer,htmlcomidas);
 })
 
 
@@ -236,59 +245,174 @@ function CierroFicha() {
 
 
 
-function SumarCalorias() {
-    const CaloriasDia= DietaNueva.reduce((acc, el)=>{
-        return acc + el.calorias ;
-     },0)
 
-     console.log( "Hoy Consumiste Un Total De"+ " " + CaloriasDia + "Kcal" + " " + "En Calorias");
+
+//function PintarDatos(params) {
+  //  const Cuneta= document.getElementById('box__cuenta')
+    
+  //  let htmlpintado= 
+//}
+
+
+
+
+
  
-}
+
+
+
+
+
+const Main= document.getElementsByClassName('body__fondo');
+ 
+
+
+const FichaNutri=`
+<main class="ficha__body">
+    <div class="body__container">
+        <div class="box__titel">
+            <h1 class="titel">Mi Ficha Nutricional</h1>
+        </div>
+        <div class="box__tabla">
+            <div class="tabla">
+                <span>Nombre</span>
+            </div>
+            <div class="tabla"> 
+            <span>Cantidad</span>
+            </div>
+            <div class="tabla">
+            <span>Calorias</span>
+            </div>
+            <div class="tabla">
+            <span>Proteinas</span>
+            </div>
+            <div class="tabla">
+            <span>Carbohidratos</span>
+            </div>
+            <div class="tabla">
+            <span>Grasas</span>
+            </div>
+        </div>
+        <div id="box__info">
+
+        </div>
+        <div id="box__cuenta">
+            <div> </div>
+        </div>
+    </div>
+</main>
+`
 
 function SumarProteinas() {
     const ProteinasDia= DietaNueva.reduce((acc, el)=>{
         return acc + el.proteinas;
      },0)
-    
-     console.log( "Hoy Consumiste Un Total De"+ " " + ProteinasDia + "g" + " " + "En Proteinas");
 
-}
+     const CaloriasDia= DietaNueva.reduce((acc, el)=>{
+        return acc + el.calorias ;
+     },0)
 
+     const CarboDia= DietaNueva.reduce((acc, el)=>{
+        return acc + el.carbohidratos;
+     },0)
 
-function SumarGrasas() {
-    const GrasasDia= DietaNueva.reduce((acc, el)=>{
+     const GrasasDia= DietaNueva.reduce((acc, el)=>{
         return acc + el.grasas;
      },0)
     
-    console.log( "Hoy Consumiste Un Total De"+ " " + GrasasDia + " " + "Grasas Totales");
-    
+     const ArrValores= [CaloriasDia, ProteinasDia, CarboDia, GrasasDia];
+     
+     const ValoJson= JSON.stringify(ArrValores)
+     sessionStorage.setItem("valores", ValoJson)
+     
+     
 }
- 
 
-function SumarCarbo() {
-    const CarboDia= DietaNueva.reduce((acc, el)=>{
-        return acc + el.carbohidratos;
-     },0)
+
+function StorageFicha(arr) {
+     const Ajason= JSON.stringify(arr);
+
+    sessionStorage.setItem( "mi dieta" , Ajason);
+
     
-    console.log( "Hoy Consumiste Un Total De"+ " " + CarboDia + " " + "Carbohidratos Totales");
     
 }
+
+
+
+
+
+
+
+
+
+
+
+function ListaHTML(arr) {
+    const info= document.getElementById('box__info');
+ 
+    let html2="";
+     for (const item of arr) {
+        html2= `<ul id="lista" >
+         <li class="li__column">${item.nombre}</li>
+         <li class="li__column">${item.cantidad}</li>
+         <li class="li__column">${item.calorias}</li>
+         <li class="li__column">${item.proteinas}</li>
+         <li class="li__column" >${item.carbohidratos}</li> 
+         <li class="li__column">${item.grasas}</li>
+         </ul>`;
+         info.innerHTML += html2;
+     }
+
+   
+}
+
+
+//function PintarHTML(arr) {
+ //   const cuenta= document.getElementById("box__cuenta");
+
+  //  let html3="";
+
+    
+ //   html3= ` <div>
+  //  <span>Hoy consumiste ${arr[0]} en calorias  </span>
+ //  </div>
+ //  <div>
+ //   <span>Hoy consumiste ${arr[1]} en proteinas  </span>
+ //  </div>
+ //  <div>
+ //  <span>Hoy consumiste ${arr[2]} en carbohidratos </span>
+ // </div>
+ // <div>
+ //   <span>Hoy consumiste ${arr[3]} en grasas </span>
+  // </div> `;
+
+    
+  //  cuenta.innerHTML += html3;
+    
+     
+//}
 
 const IgualA = document.getElementsByClassName('option__gridelement--igual');
 
 IgualA[0].addEventListener('click', ()=>{
     CierroFicha(),
-    SumarCalorias(),
     SumarProteinas(),
-    SumarCarbo(),
-    SumarGrasas();
+    // PintarHTML(JSON.parse(sessionStorage.getItem("valores")))
+    StorageFicha(DietaNueva),
+    HTML(Main, FichaNutri),
+    ListaHTML( JSON.parse(sessionStorage.getItem("mi dieta")) );
 
 })
+
+const cuenta= document.getElementById("box__cuenta");
+
+
 
 
  const BottonIMC = document.getElementsByClassName('special__gridelement');
 
-
+ 
     function CalculadoraIMC() {
         let peso
         let altura
@@ -408,7 +532,7 @@ numeroX[0].addEventListener('click', ()=>{
     MostrarNum(9)
 })
 
-console.log(numeroX);
+
 
 const agrego= document.getElementsByClassName('nombres__gridelement')
 
@@ -483,6 +607,5 @@ function Borrar() {
 EliminarUno[0].addEventListener('click', ()=>{
     Borrar()
 })
-
 
 
