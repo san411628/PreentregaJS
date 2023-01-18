@@ -471,3 +471,13 @@
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#box__info{
+    margin: 25px 0px;
+}
+
+#box__cuenta{
+    font-size: 20px;
+    
+    
+}

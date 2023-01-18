@@ -42,7 +42,7 @@ html(htmlcrear)
 
 const biblioteca= document.getElementById('Mio')
 
-
+biblioteca.classList.add("tabla")
 
 function ListaHTML(arr, con) {
     con.innerHTML=" "

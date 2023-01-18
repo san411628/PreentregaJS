@@ -70,6 +70,7 @@ function HTML(un, el) {
    
 }
 
+
 //function HTML(el) {
 	//NumerosContainer[0].innerHTML = "";
 	//console.log(el);
@@ -80,14 +81,7 @@ function HTML(un, el) {
 
 const BottonLlamar= document.getElementsByClassName('picture')
 
-BottonLlamar[0].addEventListener('click', ()=>{
-    HTML(NumerosContainer,htmlnumeros);
-})
 
-
-BottonLlamar[1].addEventListener('click', ()=>{
-   HTML(NumerosContainer,htmlcomidas);
-})
 
 
 
@@ -217,7 +211,7 @@ function SeleccionCantidad(arr) {
 
 
 const BottonComidas = document.getElementsByClassName('food__gridelement');
-
+console.log(BottonComidas[3]);
 BottonComidas[3].addEventListener('click', ()=>{
     SeleccionCantidad(BrocolisArr)
     console.log(DietaNueva);
@@ -247,11 +241,6 @@ function CierroFicha() {
 
 
 
-//function PintarDatos(params) {
-  //  const Cuneta= document.getElementById('box__cuenta')
-    
-  //  let htmlpintado= 
-//}
 
 
 
@@ -367,41 +356,40 @@ function ListaHTML(arr) {
    
 }
 
+function PintarHTML(arr) {
+   const CuentaContainer= document.getElementById("box__cuenta");
 
-//function PintarHTML(arr) {
- //   const cuenta= document.getElementById("box__cuenta");
-
-  //  let html3="";
-
-    
- //   html3= ` <div>
-  //  <span>Hoy consumiste ${arr[0]} en calorias  </span>
- //  </div>
- //  <div>
- //   <span>Hoy consumiste ${arr[1]} en proteinas  </span>
- //  </div>
- //  <div>
- //  <span>Hoy consumiste ${arr[2]} en carbohidratos </span>
- // </div>
- // <div>
- //   <span>Hoy consumiste ${arr[3]} en grasas </span>
-  // </div> `;
+   let html3="";
 
     
-  //  cuenta.innerHTML += html3;
+   html3= ` <div>
+    <span>Hoy consumiste ${arr[0]} en calorias  </span>
+    </div>
+    <div>
+    <span>Hoy consumiste ${arr[1]} en proteinas  </span>
+    </div>
+    <div>
+    <span>Hoy consumiste ${arr[2]} en carbohidratos </span>
+    </div>
+    <div>
+    <span>Hoy consumiste ${arr[3]} en grasas </span>
+   </div> `;
+
+    
+   CuentaContainer.innerHTML += html3;
     
      
-//}
+}
 
 const IgualA = document.getElementsByClassName('option__gridelement--igual');
 
 IgualA[0].addEventListener('click', ()=>{
     CierroFicha(),
     SumarProteinas(),
-    // PintarHTML(JSON.parse(sessionStorage.getItem("valores")))
     StorageFicha(DietaNueva),
     HTML(Main, FichaNutri),
-    ListaHTML( JSON.parse(sessionStorage.getItem("mi dieta")) );
+    ListaHTML( JSON.parse(sessionStorage.getItem("mi dieta")) ),
+    PintarHTML(JSON.parse(sessionStorage.getItem("valores")))
 
 })
 
@@ -483,7 +471,7 @@ Menos[0].addEventListener('click', ()=>{
 
 
 
-const ArrNumeros=[0, 1,2,3,4,5,6,7,8,9];
+const ArrNumeros=[0,1,2,3,4,5,6,7,8,9];
 
 function MostrarNum( val) {
   Resultado.innerText= Resultado.innerText + ArrNumeros[val]
@@ -607,5 +595,17 @@ function Borrar() {
 EliminarUno[0].addEventListener('click', ()=>{
     Borrar()
 })
+
+BottonLlamar[0].addEventListener('click', ()=>{
+    HTML(NumerosContainer,htmlnumeros)
+})
+
+
+BottonLlamar[1].addEventListener('click', ()=>{
+   HTML(NumerosContainer,htmlcomidas)
+})
+
+
+
 
 
