@@ -1,92 +1,10 @@
 
-const NumerosContainer= document.getElementsByClassName('calculator__food--option');
-
-let htmlnumeros= `<div class="numeros__gridcontainer">
-                    <div class="numeros__gridelement">
-                        <span>9</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>8</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>7</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>6</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>5</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>4</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>3</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>2</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>1</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>0</span>
-                    </div>
-                    <div class="numeros__gridelement">
-                        <span>.</span>
-                    </div>
-                    <div class="borrar__gridelement">
-                        <div class="borrar__flecha">
-                        <img class="flecha" src="multimedia/flechabolveatra-removebg-preview.png" >
-                        </div>
-                    </div>
-                    </div>`
-
-
-
-let htmlcomidas=`<div class="food__gridcontainer">
-                    <div class="food__gridelement">
-                        <div class="container__vector2">
-                            <img class="vector2" src="multimedia/chikenrecolorremovebg-preview.png" alt="">
-                        </div>
-                    </div>
-                    <div class="food__gridelement">
-                        <span>Carne</span>
-                    </div>
-                    <div class="food__gridelement">
-                        <span>Helado</span>
-                    </div>
-                    <div class="food__gridelement">
-                    <p> Brocoli</p>
-                    </div>
-                    
-                    </div>`
-
-
 function HTML(un, el) {
-    un[0].innerHTML= "";
+   un[0].innerHTML= "";
     
-    un[0].innerHTML= el;
+  un[0].innerHTML= el;
    
 }
-
-
-//function HTML(el) {
-	//NumerosContainer[0].innerHTML = "";
-	//console.log(el);
-	//NumerosContainer[0].innerHTML = el;
-//}
-
-
-
-const BottonLlamar= document.getElementsByClassName('picture')
-
-
-
-
-
-
-
 
 
 function Comidas(nombre, cantidad, calorias,proteinas, carbohidratos, grasas  ) {
@@ -100,36 +18,8 @@ function Comidas(nombre, cantidad, calorias,proteinas, carbohidratos, grasas  ) 
    
 }
    
- const brocoli = new Comidas("Brocoli", 100 + "g" , 34 , 2.82, 6.6, 0.37);
- const brocoli50 = new Comidas("Brocoli",  50 + "g" , brocoli.calorias / 2 , brocoli.proteinas / 2, brocoli.carbohidratos / 2, brocoli.grasas / 2);
- const brocoli200 = new Comidas("Brocoli",  200 + "g" , brocoli.calorias * 2 , brocoli.proteinas * 2, brocoli.carbohidratos * 2, brocoli.grasas * 2);
- const brocoli300 = new Comidas("Brocoli",  300 + "g" , brocoli.calorias * 3 , Math.round( brocoli.proteinas * 3) , Math.round (brocoli.carbohidratos * 3) , Math.round( brocoli.grasas * 3));
- const brocoli400 = new Comidas("Brocoli",  400 + "g" , brocoli.calorias * 4 , brocoli.proteinas * 4, brocoli.carbohidratos * 4, brocoli.grasas * 4);
- const brocoli500 = new Comidas("Brocoli",  500 + "g" , brocoli.calorias * 5 ,  brocoli.proteinas * 5 , brocoli.carbohidratos * 5 ,  brocoli.grasas * 5);
 
 
-    const pollo = new Comidas("Pollo Simple", 100 + "g", 176 , 32.7, 0 , 5.0);
-    const pollo50 = new Comidas("Pollo Simple", 50 + "g", pollo.calorias / 2 , pollo.proteinas / 2, 0 , pollo.grasas / 2);
-    const pollo200 = new Comidas("Pollo Simple", 200 + "g", pollo.calorias * 2  , pollo.proteinas * 2 , 0 , pollo.grasas * 2 );
-    const pollo300 = new Comidas("Pollo Simple", 300 + "g", pollo.calorias * 3  , Math.round( pollo.proteinas * 3) , 0 , pollo.grasas * 3 );
-    const pollo400 = new Comidas("Pollo Simple", 400 + "g", pollo.calorias * 4  , pollo.proteinas * 4 , 0 , pollo.grasas * 4 );
-    const pollo500 = new Comidas("Pollo Simple", 500 + "g", pollo.calorias * 5  , pollo.proteinas * 5 , 0 , pollo.grasas * 4 );
-
-
-    const carne = new Comidas("Carne De Res", 100 + "g", 288, 26.3, 0, 19.5);
-    const carne50 = new Comidas("Carne De Res", 50 + "g", carne.calorias / 2, carne.proteinas / 2, 0, carne.grasas / 2);
-    const carne200 = new Comidas("Carne De Res", 200 + "g", carne.calorias * 2, carne.proteinas * 2, 0, carne.grasas * 2);
-    const carne300 = new Comidas("Carne De Res", 300 + "g", carne.calorias * 3, carne.proteinas * 3, 0, carne.grasas * 3);
-    const carne400 = new Comidas("Carne De Res", 400 + "g", carne.calorias * 4, carne.proteinas * 4, 0, carne.grasas * 4);
-    const carne500 = new Comidas("Carne De Res", 500 + "g", carne.calorias * 5, carne.proteinas * 5, 0, carne.grasas * 5);
-    
-
-
-
-
-const BrocolisArr= [ brocoli50, brocoli, brocoli200, brocoli300, brocoli400, brocoli500  ];
-const PolloArr= [pollo50, pollo, pollo200, pollo300, pollo400, pollo500];
-const CarneArr= [ carne50, carne , carne200, carne300, carne400, carne500];
 
 
 
@@ -145,110 +35,13 @@ function FindPush(arr, num) {
 const DietaNueva =[];
 
 
-function SeleccionCantidad(arr) {
-
-    let option=prompt("Elige la cantidad Del Alimento Seleccionado \n-50g \n-100g \n-200g \n-300g \n-400g \n-500g \n- Hace Click En El Igual Para Ver Tus Resultados Al Final!");
-
-    switch (option) {
-        case "50g" :
-        
-        FindPush(arr, "50g")
-        
-            break;
-        case "100g":
-        
-        FindPush(arr, "100g")
-        
-            break;
-      
-
-        case "200g":
-    
-        FindPush(arr, "200g")
-        
-             
-            break;
-
-         case "300g":
-           
-        
-         FindPush(arr, "300g")
-        
-                 
-            break;
-
-        case "400g":
-       
-        FindPush(arr, "400g")
-        
-        
-             break;
-
-        case "500g":
-            
-        FindPush(arr, "500g")
-                     
-            break;
-
-    default:
-        alert("Campo Invalido")
-     
-    }
-
-  
-
-}
 
 
-
-
- 
-
-
-
-
-
-
-
-const BottonComidas = document.getElementsByClassName('food__gridelement');
-console.log(BottonComidas[3]);
-BottonComidas[3].addEventListener('click', ()=>{
-    SeleccionCantidad(BrocolisArr)
-    console.log(DietaNueva);
-
-})
-
-BottonComidas[1].addEventListener('click', ()=>{
-    SeleccionCantidad(CarneArr)
-    console.log(DietaNueva);
-
-})
-
-BottonComidas[0].addEventListener('click', ()=>{
-    SeleccionCantidad(PolloArr)
-    console.log(DietaNueva);
-
-})
 
 function CierroFicha() {
     alert("Gracias Por Utilizar Nuestra Calculadora!! \n Tu Ficha Esta Lista En La Consola.")
     console.log("Este Es El Fin De Tu Ficha Nutricional.");
 }
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 
 
 
@@ -378,8 +171,283 @@ function PintarHTML(arr) {
     
    CuentaContainer.innerHTML += html3;
     
+
      
 }
+
+
+//const ContenedorNumeros= document.getElementsByClassName('numeros__gridcontainer')
+const ContenedorAll= document.getElementsByClassName('calculator__all')
+const ContenedorCarbohidratos= document.getElementsByClassName('calculator__carbohidratos')
+const ContenedorCaracteres= document.getElementsByClassName('calculator__tabla')
+//const BtnPesos= document.getElementsByClassName('box2__pesos')
+//const BtnNutricional= document.getElementsByClassName('box1__caracteres')
+
+const arrAll=[ContenedorAll[0], ContenedorCaracteres[0], ContenedorCarbohidratos[0]];
+ //const ArrCaracteres=[BtnNutricional[0], BtnPesos[0]];
+//const ArrPesos=[agrego[0], agrego[1], agrego[2], agrego[3], agrego[4], agrego[5]]
+
+
+
+
+function CambiarClassDis(el, arr) {
+   
+   
+    for (const un of arr) {
+     //SACAR
+        if (un.classList[1]=="active") {
+            un.classList.remove("active")
+            un.classList.add("hidden")
+        } 
+    }
+
+     //PONER
+    el[0].classList.remove("hidden");
+    el[0].classList.add("active");
+
+    
+
+}
+
+
+
+const BottonComidas = document.getElementsByClassName('food__gridelement');
+
+
+
+
+
+
+function CreoVariante() {
+    const MiVarianteAct= document.getElementsByClassName('box1__caracteres')
+    MiVarianteAct[0].innerHTML=" "
+  
+    const cantidadAlimento=`   
+<div class="caracteres__gridcontainer">
+    <div class="pesos__gridelement">
+        <span>GRAMOS</span>
+    </div>
+    <div class="pesos__gridelement">
+        <span>ONZAS</span>
+    </div>
+    <div class="pesos__gridelement">
+        <span>Porcion</span>
+    </div>
+</div>`
+ 
+
+    MiVarianteAct[0].innerHTML += cantidadAlimento;
+
+    const AgregoPesos= document.getElementsByClassName('pesos__gridelement')
+
+
+    AgregoPesos[0].addEventListener('click', ()=>{
+        MostrarStri("G")
+    })
+} 
+
+
+function CreoVarianteNormal() {
+    const MiVarianteAct= document.getElementsByClassName('box1__caracteres')
+    MiVarianteAct[0].innerHTML=" "
+  
+    const VariableNormal= `  <div class="caracteres__gridcontainer">
+                                            
+                        <div class="nombres__gridelement">
+                            <span>CALORIAS</span>
+                        </div>
+                        <div class="nombres__gridelement">
+                            <span>PROTEINAS</span>
+                        </div>
+                        <div class="nombres__gridelement">
+                            <span>CARBOHIDRATOS</span>
+                        </div>
+                        </div> `
+ 
+
+    MiVarianteAct[0].innerHTML += VariableNormal ;
+
+    const agrego= document.getElementsByClassName('nombres__gridelement')
+
+    agrego[0].addEventListener('click', ()=>{
+        MostrarStri("KCAL");
+    })
+    
+    agrego[1].addEventListener('click', ()=>{
+        MostrarStri("PROT")
+    })
+    
+    agrego[2].addEventListener('click', ()=>{
+        MostrarStri("CARB")
+    })
+    
+} 
+
+CreoVarianteNormal()
+
+                                    //nombre       cant     kcal   prot   carb  grasa
+const PolloPechuga = new Comidas("Pollo Pechuga", 1 + "g", 1.95 , 0.2955 , 0 , 0.0772);
+const PolloConPiel = new Comidas("Pollo Piel", 1 + "g", 2.06 , 0.16, 0 , 0.033);
+const PolloFrito = new Comidas("Pollo Frito", 1 + "g", 2.41 , 0.2 , 0.09 , 0.14);
+const PolloHorno = new Comidas("Pollo Horno", 1 + "g", 2.37, 0.2707, 0, 0.1349);
+
+const PescadoMerluza = new Comidas("Merluza", 1 + "g", 1.32, 0.2138, 0.0041, 0.0438)
+const PescadoBlanco = new Comidas("Pescado Blanco", 1 + "g", 1.34, 0.1909, 0, 0.0586)
+const PescadoSalmon = new Comidas("Salmon", 1 + "g", 1.46, 0.2162, 0, 0.0593)
+const PescadoRabas = new Comidas("Rabas", 1 + "g",1.75, 0.097, 0.123, 0.096)
+
+const CarneRes = new Comidas("Carne Res", 1 + "g",1.35, 0.2191, 0, 0.0462)
+const CarneChorizo = new Comidas("Chorizo", 1 + "g",3.58, 0.21, 0.032, 0.29)
+const CarneCerdo = new Comidas("Cerdo Lomo", 1 + "g",1.36, 0.2054, 0, 0.0541)
+const Salchichas = new Comidas("Salchichas", 1 + "g",1.9 , 0.088, 0.061, 0.118)
+
+const Atun = new Comidas("Atun Lata", 1 + "g",1.16, 0.2551, 0, 0.0082)
+const Jamon = new Comidas("Jamon", 1 + "g",1.21, 0.1813, 0.0197, 0.0398 )
+
+
+
+function guardarcomida(el) {
+  MostrarStriVacio(el.nombre)
+    let eljsa= JSON.stringify(el)
+    sessionStorage.setItem(el.nombre, eljsa )
+}
+
+
+
+
+
+BottonComidas[0].addEventListener('click', ()=>{
+    guardarcomida(PolloPechuga),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[1].addEventListener('click', ()=>{
+    guardarcomida(PolloConPiel),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[2].addEventListener('click', ()=>{
+    guardarcomida(PolloHorno),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[3].addEventListener('click', ()=>{
+    guardarcomida(PolloFrito),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[4].addEventListener('click', ()=>{
+    guardarcomida(PescadoMerluza),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[5].addEventListener('click', ()=>{
+    guardarcomida(PescadoBlanco),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[6].addEventListener('click', ()=>{
+    guardarcomida(PescadoSalmon),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[7].addEventListener('click', ()=>{
+    guardarcomida(PescadoRabas),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[8].addEventListener('click', ()=>{
+    guardarcomida(CarneRes),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[9].addEventListener('click', ()=>{
+    guardarcomida(CarneCerdo),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[10].addEventListener('click', ()=>{
+    guardarcomida(CarneChorizo),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[11].addEventListener('click', ()=>{
+    guardarcomida(Salchichas),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[12].addEventListener('click', ()=>{
+    guardarcomida(Atun),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+//fetch('http://api.spoonacular.com/recipes/findByNutrients')
+//.then(res=> res.json())
+//.then(data=>{
+  // console.log(data);
+//});
+
+
+
+
+
+
+
+const BtnCambio= document.getElementsByClassName('picture');
+
+BtnCambio[0].addEventListener('click', ()=>{
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+    
+})
+
+BtnCambio[1].addEventListener('click', ()=>{
+    CambiarClassDis(ContenedorAll, arrAll)
+})
+
+BtnCambio[2].addEventListener('click', ()=>{
+    CambiarClassDis(ContenedorCarbohidratos, arrAll)
+})
+
+console.log(BottonComidas);
 
 const IgualA = document.getElementsByClassName('option__gridelement--igual');
 
@@ -389,7 +457,7 @@ IgualA[0].addEventListener('click', ()=>{
     StorageFicha(DietaNueva),
     HTML(Main, FichaNutri),
     ListaHTML( JSON.parse(sessionStorage.getItem("mi dieta")) ),
-    PintarHTML(JSON.parse(sessionStorage.getItem("valores")))
+    PintarHTML(JSON.parse(sessionStorage.getItem("valores")));
 
 })
 
@@ -439,7 +507,15 @@ const cuenta= document.getElementById("box__cuenta");
     function Restar(arr,el) {
         
         arr.pop(el)
-        console.log("Se Elimino La Ultima Comida De Tu Dieta");
+        Toastify({
+            text: "Se Elimino El Ultimo Alimento De Tu Ficha ",
+            position: "left",
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+              },
+            duration: 2500
+            
+        }).showToast();
         console.log(arr);
       
     }
@@ -452,15 +528,17 @@ const cuenta= document.getElementById("box__cuenta");
  })
 
  const Resultado= document.getElementById('resultado');
-
+ const Strin= document.getElementById('stri')
 const Menos= document.getElementsByClassName('option__gridelement--menos');
 
 function MostrarStri(el) {
-    Resultado.innerText = Resultado.innerText + el
-
+    Resultado.innerText = Resultado.innerText + " " + el
 }
 
+function MostrarStriVacio(el) {
+   Strin.innerText = Strin.innerText + el
 
+}
 
 Menos[0].addEventListener('click', ()=>{
     Restar(DietaNueva);
@@ -471,22 +549,26 @@ Menos[0].addEventListener('click', ()=>{
 
 
 
-const ArrNumeros=[0,1,2,3,4,5,6,7,8,9];
+const ArrNumeros=[0,1,2,3,4,5,6,7,8,9,","];
 
 function MostrarNum( val) {
   Resultado.innerText= Resultado.innerText + ArrNumeros[val]
 }
 
 
-
 const numeroX= document.getElementsByClassName('numeros__gridelement');
+
+
+numeroX[10].addEventListener('click', ()=>{
+    MostrarNum(10)
+})
 
 numeroX[9].addEventListener('click', ()=>{
     MostrarNum(0)
 })
 
 numeroX[8].addEventListener('click', ()=>{
-    MostrarNum(1)
+    MostrarNum(3)
 })
 
 numeroX[7].addEventListener('click', ()=>{
@@ -494,10 +576,10 @@ numeroX[7].addEventListener('click', ()=>{
 })
 
 numeroX[6].addEventListener('click', ()=>{
-    MostrarNum(3)
+    MostrarNum(1)
 })
 numeroX[5].addEventListener('click', ()=>{
-    MostrarNum(4)
+    MostrarNum(6)
 })
 
 numeroX[4].addEventListener('click', ()=>{
@@ -505,11 +587,11 @@ numeroX[4].addEventListener('click', ()=>{
 })
 
 numeroX[3].addEventListener('click', ()=>{
-    MostrarNum(6)
+    MostrarNum(4)
 })
 
 numeroX[2].addEventListener('click', ()=>{
-    MostrarNum(7)
+    MostrarNum(9)
 })
 
 numeroX[1].addEventListener('click', ()=>{
@@ -517,59 +599,112 @@ numeroX[1].addEventListener('click', ()=>{
 })
 
 numeroX[0].addEventListener('click', ()=>{
-    MostrarNum(9)
+    MostrarNum(7)
 })
 
 
 
-const agrego= document.getElementsByClassName('nombres__gridelement')
 
 
-agrego[0].addEventListener('click', ()=>{
-    MostrarStri("KCAL");
-})
 
-agrego[1].addEventListener('click', ()=>{
-    MostrarStri("PROT")
-})
-
-agrego[2].addEventListener('click', ()=>{
-    MostrarStri("CARB")
-})
-
-function SumaDeCosas() {
-   if (Resultado.innerText.includes("KCAL")) {
-    const valorKCAl= new Comidas(0, 0,   parseInt( Resultado.innerText), 0, 0, 0); 
-    DietaNueva.push(valorKCAl);
-    console.log(DietaNueva);
-   } else {
-    if (Resultado.innerText.includes("PROT")) {
-        const valorKCAl= new Comidas(0, 0,   0, parseInt( Resultado.innerText), 0, 0); 
-        DietaNueva.push(valorKCAl);
-        console.log(DietaNueva);
-    } else{
-        if (Resultado.innerText.includes("CARB")) {
-            const valorKCAl= new Comidas(0, 0,   0, 0 , parseInt( Resultado.innerText), 0); 
-            DietaNueva.push(valorKCAl);
-            console.log(DietaNueva);
-        } else{
-            alert("El Valor No Tiene Categoria")
-        }
-    }
-   } 
-}
 
 function Clear() {
     Resultado.innerText= Resultado.innerText.slice(1000, -1)
+    Strin.innerText= Strin.innerText.slice(1000, -1)
 }
+
+
 
 
 const Mas= document.getElementsByClassName('option__gridelement--mas')
 
 
-Mas[0].addEventListener('click', ()=>{
-    SumaDeCosas(),
-    Clear();
+
+Mas[0].addEventListener('click', (event)=>{
+    function SumaDeCosas() {
+        if (Resultado.innerText.includes("KCAL")) {
+         const valorKCAl= new Comidas(0, 0,   parseInt( Resultado.innerText), 0, 0, 0); 
+         DietaNueva.push(valorKCAl);
+         console.log(DietaNueva);
+         Toastify({
+             text: "Se Agrego El Alimento",
+             position: "left",
+             style: {
+                 background: "linear-gradient(to right, #00b09b, #96c93d)",
+               },
+             duration: 2500
+             
+         }).showToast();
+         Clear()
+        } else {
+         if (Resultado.innerText.includes("PROT")) {
+             const valorKCAl= new Comidas(0, 0,   0, parseInt( Resultado.innerText), 0, 0); 
+             DietaNueva.push(valorKCAl);
+             console.log(DietaNueva);
+             Toastify({
+                 text: "Se Agrego El Alimento",
+                 position: "left",
+                 style: {
+                     background: "linear-gradient(to right, #00b09b, #96c93d)",
+                   },
+                 duration: 2500
+                 
+             }).showToast();
+             Clear()
+         } else{
+             if (Resultado.innerText.includes("CARB")) {
+                 const valorKCAl= new Comidas(0, 0,   0, 0 , parseInt( Resultado.innerText), 0); 
+                 DietaNueva.push(valorKCAl);
+                 console.log(DietaNueva);
+                 Toastify({
+                     text: "Se Agrego El Alimento",
+                     position: "left",
+                     style: {
+                         background: "linear-gradient(to right, #00b09b, #96c93d)",
+                       },
+                     duration: 2500
+                     
+                 }).showToast();
+                 Clear();
+                } else if (Resultado.innerText.includes("G")) {
+                    const ComidaGuardada= JSON.parse(sessionStorage.getItem(Strin.innerText))
+                    const GuardoDato = new Comidas(Strin.innerText, parseInt( Resultado.innerText) + "g" , parseInt( Resultado.innerText), parseInt( Resultado.innerText), parseInt( Resultado.innerText), parseInt( Resultado.innerText)  );
+                    console.log(Strin.innerText);
+                    let MiComida= new Comidas(Strin.innerText, GuardoDato.cantidad, Math.round( ComidaGuardada.calorias * GuardoDato.calorias), Math.round( ComidaGuardada.proteinas * GuardoDato.proteinas), Math.round(  ComidaGuardada.carbohidratos * GuardoDato.carbohidratos), Math.round( ComidaGuardada.grasas * GuardoDato.grasas))
+                    DietaNueva.push(MiComida);
+                    console.log(DietaNueva);
+                    Toastify({
+                        text: "Se Agrego El Alimento",
+                        position: "left",
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                          },
+                        duration: 2500
+                        
+                    }).showToast();
+                    Clear();
+                } else{
+                            Toastify({
+                                text: "El Valor No tiene Categoria",
+                                position: "left",
+                                style: {
+                                    background: "linear-gradient(to right, #FF0000, #ff6600)",
+                                },
+                                duration: 3000
+                                
+                            }).showToast();
+
+                            event.preventDefault();
+                            
+                        }
+         }
+        } 
+     }
+
+     SumaDeCosas(),
+     CreoVarianteNormal()
+
+
 })
 
 
@@ -596,14 +731,16 @@ EliminarUno[0].addEventListener('click', ()=>{
     Borrar()
 })
 
-BottonLlamar[0].addEventListener('click', ()=>{
-    HTML(NumerosContainer,htmlnumeros)
-})
+//BottonLlamar[0].addEventListener('click', ()=>{
+   // HTML(NumerosContainer,htmlnumeros)
+//})
 
 
-BottonLlamar[1].addEventListener('click', ()=>{
-   HTML(NumerosContainer,htmlcomidas)
-})
+//BottonLlamar[1].addEventListener('click', ()=>{
+   //HTML(NumerosContainer,htmlcomidas)
+//})
+
+
 
 
 

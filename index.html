@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="multimedia/calculatorfavico.ico" type="image/x-icon">
     <title>IMC.Calculator</title>
@@ -15,7 +16,7 @@
             <div class="box1__container--logo">
                <div class="container__logo">
                 <!--    <img class="logo" src="multimedia/logocalculadorablack-removebg-preview.png" alt=""> -->
-                   <td colspan="4"><span id="resultado"></span></td>
+                   <td colspan="4"><span id="stri"></span><span id="resultado"></span></td>
                </div>
               
             </div>
@@ -55,51 +56,94 @@
                     </div> 
                 </nav> 
                 <nav class="calculator__food--option">
-             <div class="food__gridcontainer">
+                <nav class="calculator__all hidden">
+                 <div class="food__gridcontainer">
                         <div class="food__gridelement">
-                            <div class="container__vector2">
-                                <img class="vector2" src="multimedia/chikenrecolorremovebg-preview.png" alt="">
-                            </div>
+                            <span>Pechuga de Pollo</span>
                         </div>
                         <div class="food__gridelement">
-                            <span>Carne</span>
+                            <span>Pollo Con Piel</span>
                         </div>
                         <div class="food__gridelement">
-                            <span>Helado</span>
+                            <span>Pollo al Horno</span>
                         </div>
                         <div class="food__gridelement">
-                           <p> Brocoli</p>
+                           <p>Pollo Frito</p>
                         </div>
-                        
-                    </div>    
-
+                        <div class="food__gridelement">
+                            <span>File De Merlusa</span>
+                        </div>
+                        <div class="food__gridelement">
+                            <span>Pescado Blanco</span>
+                        </div>
+                        <div class="food__gridelement">
+                            <span>Salmon</span>
+                        </div>
+                        <div class="food__gridelement">
+                           <p>Rabas</p>
+                        </div>
+                        <div class="food__gridelement">
+                            <span>Carne De Res</span>
+                        </div>
+                        <div class="food__gridelement">
+                            <span>Cerdo En Lomo</span>
+                        </div>
+                        <div class="food__gridelement">
+                            <span>Chorizo</span>
+                        </div>
+                        <div class="food__gridelement">
+                           <p>Salchicha</p>
+                        </div>
+                        <div class="food__gridelement">
+                            <p>Atun En Lata</p>
+                         </div>
+                    </div> 
+                </nav>
+                <nav class="calculator__carbohidratos hidden">
+                    <div class="food__gridcontainer">
+                           <div class="food__gridelement">
+                               <span>Fideos</span>
+                           </div>
+                           <div class="food__gridelement">
+                               <span>Arroz</span>
+                           </div>
+                           <div class="food__gridelement">
+                               <span>Havena</span>
+                           </div>
+                           <div class="food__gridelement">
+                              <p>Facturas</p>
+                           </div>
+                           
+                       </div> 
+                   </nav>
+                <nav class="calculator__tabla active">
               <div class="numeros__gridcontainer">
                         <div class="numeros__gridelement">
-                            <span>9</span>
+                            <span>7</span>
                         </div>
                         <div class="numeros__gridelement">
                             <span>8</span>
                         </div>
                         <div class="numeros__gridelement">
-                            <span>7</span>
-                        </div>
-                        <div class="numeros__gridelement">
-                            <span>6</span>
-                        </div>
-                        <div class="numeros__gridelement">
-                            <span>5</span>
+                            <span>9</span>
                         </div>
                         <div class="numeros__gridelement">
                             <span>4</span>
                         </div>
                         <div class="numeros__gridelement">
-                            <span>3</span>
+                            <span>5</span>
+                        </div>
+                        <div class="numeros__gridelement">
+                            <span>6</span>
+                        </div>
+                        <div class="numeros__gridelement">
+                            <span>1</span>
                         </div>
                         <div class="numeros__gridelement">
                             <span>2</span>
                         </div>
                         <div class="numeros__gridelement">
-                            <span>1</span>
+                            <span>3</span>
                         </div>
                         <div class="numeros__gridelement">
                             <span>0</span>
@@ -113,7 +157,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="caracteres__gridcontainer">
+                    <div class="box1__caracteres active">
+                <!--    <div class="caracteres__gridcontainer">
+                        
                         <div class="nombres__gridelement">
                             <span>CALORIAS</span>
                         </div>
@@ -123,8 +169,27 @@
                         <div class="nombres__gridelement">
                             <span>CARBOHIDRATOS</span>
                         </div>
-                    </div> 
-                 
+                       
+                    
+                
+                    </div> -->
+                    </div>
+                <!--   <div class="box2__pesos hidden"> 
+                        <div class="caracteres__gridcontainer">
+                            <div class="nombres__gridelement">
+                                <span>GRAMOS</span>
+                            </div>
+                            <div class="nombres__gridelement">
+                                <span>ONZAS</span>
+                            </div>
+                            <div class="nombres__gridelement">
+                                <span>Porcion</span>
+                            </div>
+                        </div>
+                    </div>--> 
+                </nav>
+
+                
                     <div class="option__elementos--calcladora">
                         <div class="option__gridelement--mas">
                             <div class="container__img--mas">
@@ -159,5 +224,6 @@
 
 
     <script src="java.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

@@ -9,14 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://i.ibb.co/7pGrK67/wallpapercomida.png);
+    background-color: black;
     width: 95%;
     height: 100%;
     background-position: center;
 }
 
 .main__espacio{
-    background-image: url(https://i.ibb.co/JnGpHWB/maderaoscura.jpg);
+    background-color: burlywood;
     background-position: center;
     width: 800px;
     height: 1000px;
@@ -57,6 +57,19 @@
     display: none;
 }
 
+#stri{
+    width: 50%;
+    height: 100%;
+    line-height: 100%;
+    background-color: rgb(214, 234, 211);
+    font-size: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  font-family: 'Calculator';
+}
 
 #resultado{
     width: 100%;
@@ -151,15 +164,42 @@
     justify-content: space-between;
 }
 
+.calculator__all{
+    border: solid brown 5px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.calculator__carbohidratos{
+    border: solid brown 5px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.calculator__tabla{
+    border: solid navy 5px;
+    height: 61%;
+    flex-direction: row;
+}
+
 
 .food__gridcontainer{
     border: solid 5px green;
     width: 100%;
-    height: 20%;
+    height: max-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:  100px;
-    column-gap: 10px;
+    grid-template-rows: repeat(6, 85px);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.hidden{
+ display: none;
+}
+
+.active{
+    display: flex;
 }
 
 
@@ -180,25 +220,50 @@
 
 } 
 
+
 .caracteres__gridcontainer{
     border: solid 5px orchid;
     width: 100%;
-    height: 20%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:  100px;
-    column-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 130px);
+    row-gap: 5px;
 }
+
+
+
+
 
 .nombres__gridelement{
     background-color: whitesmoke;
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
     cursor: pointer;
     border-radius: 5%;
 }
 
+.pesos__gridelement{
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.box1__caracteres{
+    border: solid 5px darkgoldenrod;
+    width: 40%;
+    height: 100%;
+}
+
+.box2__pesos{
+    border: solid 5px darkgoldenrod;
+    width: 40%;
+    height: 100%;
+}
 
 .borrar__gridelement{
     background-color: whitesmoke;
@@ -226,10 +291,9 @@
 .numeros__gridcontainer{
     border: solid 5px orange;
     width: 100%;
-    height: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  100px;
+    grid-template-rows: repeat(4, 92px);
     column-gap: 10px;
     row-gap: 10px;
 }
@@ -480,4 +544,39 @@
     font-size: 20px;
     
     
+}
+
+
+.box__select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__titulo{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.seleccione{
+    font-size: 20px;
+}
+
+.select__container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#cantidad{
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 7px;
+  
 }
