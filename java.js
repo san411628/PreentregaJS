@@ -231,7 +231,7 @@ function CreoVariante() {
         <span>ONZAS</span>
     </div>
     <div class="pesos__gridelement">
-        <span>Porcion</span>
+        <span>PORCION</span>
     </div>
 </div>`
  
@@ -243,6 +243,14 @@ function CreoVariante() {
 
     AgregoPesos[0].addEventListener('click', ()=>{
         MostrarStri("G")
+    })
+
+    AgregoPesos[1].addEventListener('click', ()=>{
+        MostrarStri("ONZ")
+    })
+
+    AgregoPesos[2].addEventListener('click' , ()=>{
+        MostrarStri("PORCION")
     })
 } 
 
@@ -303,6 +311,47 @@ const Salchichas = new Comidas("Salchichas", 1 + "g",1.9 , 0.088, 0.061, 0.118)
 
 const Atun = new Comidas("Atun Lata", 1 + "g",1.16, 0.2551, 0, 0.0082)
 const Jamon = new Comidas("Jamon", 1 + "g",1.21, 0.1813, 0.0197, 0.0398 )
+                                 //nombre cant     kcal   prot   carb  grasa
+const CarboFideos = new Comidas("Pastas", 1 + "g",1.37, 0.0451, 0.2501, 0.0206 )
+const CarboArroz = new Comidas("Arroz", 1 + "g",1.29, 0.0266, 0.279, 0.0028 )
+const CarboAvena = new Comidas("Avena", 1 + "g",3.89, 0.1689, 0.6627, 0.069 )
+const CarboCereal = new Comidas("Cereal", 1 + "g",3.58, 0.1135, 0.763, 0.024 )
+const CarboPan = new Comidas("Pan Blanco", 1 + "g",2.66, 0.0764, 0.5061,0.0329 )
+const CarboPanIntegral = new Comidas("Pan Integral", 1 + "g",2.46, 0.097, 0.461, 0.042 )
+const CarboFrutosSecos = new Comidas("Frutos Secos", 1 + "g", 4.62, 0.1318, 0.449, 0.294)
+const CarboFrijolesBl = new Comidas("Frijol Blanco", 1 + "g",1.17, 0.0726, 0.2194, 0.0029 )
+const CarboFrijolesRo = new Comidas("Frijol Rojo", 1 + "g",1.15, 0.0709, 0.2069, 0.0041 )
+const CarboLentejas = new Comidas("Lentejas", 1 + "g",1.29, 0.1048, 0.17, 0.0226 )
+const CarboGalletasAg = new Comidas("Galletitas Agua", 1 + "g",5.04, 0.07, 0.61, 0.26)
+const CarboNueces = new Comidas("Nueces", 1 + "g", 6.54, 0.1523, 0.1371, 0.6521)
+const CarboQuesoFt = new Comidas("Queso En Fetas", 1 + "g", 1.45, 0.1199, 0.0541, 0.0833)
+const CarboQuesoCr = new Comidas("Queso Crema", 1 + "g", 3.49, 0.0755, 0.0266, 0.3487)
+const CarboQuesoCremoso = new Comidas("Queso Cremoso", 1 + "g", 2.7, 0.173, 0.04, 0.205)
+const CarboPizzaMuz = new Comidas("Pizza Muzarella", 1 + "g", 2.3, 0.09, 0.3, 0.09)
+const CarboPizzaNapolitana = new Comidas("Pizza Napolitana", 1 + "g", 1.93, 0.11, 0.28, 0.04)
+
+const CarboPapasFritas = new Comidas("Papas Fritas", 1 + "g", 5.47, 0.0656, 0.4974, 0.3747)
+const CarboAros = new Comidas("Aros De Cebolla", 1 + "g", 3.32, 0.0446, 0.3774, 0.1869)
+const CarboPolenta = new Comidas("Polenta", 1 + "g", 3.66, 0.0848, 0.7768, 0.0165)
+
+
+
+const VegHuvoDuro = new Comidas("Huevo Duro", 1 + "g",1.55, 0.1258, 0.0112, 0.1061)
+const VegHuvoFrito = new Comidas("Huevo Duro", 1 + "g",1.94, 0.1258, 0.0112, 0.1469)
+
+
+
+
+const CarneMilanesa= new Comidas("Milanesa Horno", 1 + "g", 2.45, 0.2525, 0.0666, 0.122  )
+const CarneMilanesaFrita= new Comidas("Milanesa Frita", 1 + "g", 2.8, 0.2134, 0.0954, 0.0794  )
+const CarneMilanesaNapo= new Comidas("Milanesa Napo", 1 + "g",2.84 , 0.2113, 0.1215, 0.095 )
+const CarnePaty= new Comidas("Paty", 1 + "g",2.18 , 0.35, 0, 0.37 )
+
+const CarneCerdoCostillas= new Comidas("Cerdo Costilla", 1 + "g",3.95 , 0.2894, 0, 0.3017 )
+const CarneCiervo= new Comidas("Carne Venado", 1 + "g", 1.9 , 0.3608, 0, 0.0393 )
+const CarneCordero= new Comidas("Carne Cordero", 1 + "g", 2.92 , 0.2432, 0, 0.2077 )
+const CarneMorsilla= new Comidas("Morsilla", 1 + "g",3.79 , 0.146, 0.0129, 0.345 )
+
 
 
 
@@ -420,6 +469,234 @@ BottonComidas[12].addEventListener('click', ()=>{
 
 })
 
+BottonComidas[13].addEventListener('click', ()=>{
+    guardarcomida(CarneMilanesa),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[14].addEventListener('click', ()=>{
+    guardarcomida(CarneMilanesaFrita),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[15].addEventListener('click', ()=>{
+    guardarcomida(CarneMilanesaNapo),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[16].addEventListener('click', ()=>{
+    guardarcomida(CarnePaty),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[17].addEventListener('click', ()=>{
+    guardarcomida(CarneCerdoCostillas),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[18].addEventListener('click', ()=>{
+    guardarcomida(CarneCiervo),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[19].addEventListener('click', ()=>{
+    guardarcomida(CarneCordero),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[20].addEventListener('click', ()=>{
+    guardarcomida(CarneMorsilla),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+
+
+
+
+BottonComidas[24].addEventListener('click', ()=>{
+    guardarcomida(CarboFideos),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[25].addEventListener('click', ()=>{
+    guardarcomida(CarboArroz),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[26].addEventListener('click', ()=>{
+    guardarcomida(CarboAvena),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[27].addEventListener('click', ()=>{
+    guardarcomida(CarboNueces),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[28].addEventListener('click', ()=>{
+    guardarcomida(CarboFrutosSecos),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[29].addEventListener('click', ()=>{
+    guardarcomida(CarboCereal),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[30].addEventListener('click', ()=>{
+    guardarcomida(CarboPan),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[31].addEventListener('click', ()=>{
+    guardarcomida(CarboPanIntegral),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[32].addEventListener('click', ()=>{
+    guardarcomida(CarboFrijolesBl),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[33].addEventListener('click', ()=>{
+    guardarcomida(CarboFrijolesRo),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[34].addEventListener('click', ()=>{
+    guardarcomida(CarboLentejas),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[35].addEventListener('click', ()=>{
+    guardarcomida(CarboGalletasAg),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[36].addEventListener('click', ()=>{
+    guardarcomida(CarboQuesoFt),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[37].addEventListener('click', ()=>{
+    guardarcomida(CarboQuesoCremoso),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[38].addEventListener('click', ()=>{
+    guardarcomida(CarboQuesoCr),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[39].addEventListener('click', ()=>{
+    guardarcomida(CarboPizzaMuz),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[40].addEventListener('click', ()=>{
+    guardarcomida(CarboPizzaNapolitana),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+
+BottonComidas[41].addEventListener('click', ()=>{
+    guardarcomida(CarboPapasFritas),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[42].addEventListener('click', ()=>{
+    guardarcomida(CarboAros),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
+
+BottonComidas[43].addEventListener('click', ()=>{
+    guardarcomida(CarboPolenta),
+    CreoVariante(),
+    CambiarClassDis(ContenedorCaracteres, arrAll)
+
+
+})
 //fetch('http://api.spoonacular.com/recipes/findByNutrients')
 //.then(res=> res.json())
 //.then(data=>{
@@ -683,7 +960,32 @@ Mas[0].addEventListener('click', (event)=>{
                         
                     }).showToast();
                     Clear();
-                } else{
+                
+                } else if (Resultado.innerText.includes("PORCION")) {
+                    function PorCadaUno(el) {
+                        const ComidaGuardada= JSON.parse(sessionStorage.getItem(Strin.innerText))
+                        const GuardoDato = new Comidas(Strin.innerText, parseInt( Resultado.innerText) + " " + "Porciones" , parseInt( Resultado.innerText), parseInt( Resultado.innerText), parseInt( Resultado.innerText), parseInt( Resultado.innerText)  );
+                        console.log(Strin.innerText);
+                        let CantidadDePorcion= parseInt(el)
+                        let MiComida= new Comidas(Strin.innerText, GuardoDato.cantidad, Math.round( (ComidaGuardada.calorias * GuardoDato.calorias) * CantidadDePorcion), Math.round( (ComidaGuardada.proteinas * GuardoDato.proteinas) * CantidadDePorcion), Math.round( (ComidaGuardada.carbohidratos * GuardoDato.carbohidratos) * CantidadDePorcion), Math.round( (ComidaGuardada.grasas * GuardoDato.grasas) * CantidadDePorcion))
+                        DietaNueva.push(MiComida);
+                        console.log(DietaNueva);
+                        Toastify({
+                            text: "Se Agrego El Alimento",
+                            position: "left",
+                            style: {
+                                background: "linear-gradient(to right, #00b09b, #96c93d)",
+                              },
+                            duration: 2500
+                            
+                        }).showToast();
+                        Clear();
+                    }
+
+                    PorCadaUno(100)
+                   
+                } else {
+                    
                             Toastify({
                                 text: "El Valor No tiene Categoria",
                                 position: "left",
@@ -720,9 +1022,13 @@ function Borrar() {
         } else{
             if (Resultado.innerText.includes("CARB")) {
                 Resultado.innerText= Resultado.innerText.slice(1000, -1);
-            } else{
+            } else if (Resultado.innerText.includes("G")) {
+                Resultado.innerText= Resultado.innerText.slice(1000, -1);
+            } else if (Resultado.innerText.includes("PORCION")) {
+                Resultado.innerText= Resultado.innerText.slice(1000, -1);
+            } else {
                 Resultado.innerText= Resultado.innerText.slice(0, -1);
-            }
+            } 
         }
     }
 }
